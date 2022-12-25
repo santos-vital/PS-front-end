@@ -1,12 +1,9 @@
 import ApiService from '../apiservice'
 
 export default class LancamentoService extends ApiService {
-  constructor() {
-    super('/transferencia-por-nome-e-data')
-  }
 
   consultar(transferenciaFiltro) {
-    let params = `/transferencias/transferencia-por-nome-e-data?`;
+    let params = '/contas/transferencia-por-nome-e-data?';
 
     if(transferenciaFiltro.dataInicio) {
       params = `${params}&dataInicio=${transferenciaFiltro.dataInicio}`
